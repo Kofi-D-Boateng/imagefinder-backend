@@ -2,5 +2,5 @@
 
 A multithreaded web scraper implemented in Spring Boot.
 
-## Architecture
+## Frontend
 [ImageFinder Frontend](https://github.com/Kofi-D-Boateng/imagefinder-frontend.git)
