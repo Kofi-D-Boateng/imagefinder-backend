@@ -138,8 +138,11 @@ public abstract class AbstractWebGraphADT implements GraphTraversal {
             }
             latch.await();
             service.shutdown();
-            System.out.println("[COMPLETED]: Completed "+ tasksList.size() + "Traversals");
+            System.out.println("[COMPLETED]: Completed "+ tasksList.size() + " Traversals");
+        }else{
+            System.out.println(String.format("[COMPLETED]: Completed traversal for {}",this.mainUrl));
         }
+
     }
 
     @Override
