@@ -165,7 +165,7 @@ public abstract class AbstractWebGraphADT implements GraphTraversal {
             be "server friendly", and give us a greater chance of
             not getting IP banned.
          */
-        int randomDelay = ThreadLocalRandom.current().nextInt(1,5);
+        int randomDelay = ThreadLocalRandom.current().nextInt(0,3);
         Thread.sleep(randomDelay * 1000L);
 
         /*
