@@ -72,6 +72,8 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<finalName>app</finalName>
+					<outputDirectory>${basedir}</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
