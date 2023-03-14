@@ -73,10 +73,9 @@ public class ImageFinder implements Finder {
 
     @Override
     @GetMapping("/download-zip")
-    public ResponseEntity<byte[]> downloadZippedImages(@RequestParam("srcs") String commsepSrc) throws IOException {
+    public ResponseEntity<byte[]> downloadZippedImages(@RequestParam("srcs") String commaSeparatedSource) throws IOException {
 
-        List<String> srcs = new ArrayList<>();
-        Collections.addAll(srcs, commsepSrc.substring(1, commsepSrc.length() - 1).split(","));
+        List<String> srcs = new ArrayList<>(Arrays.asList(commaSeparatedSource.split(",")));
 
         System.out.println("[IN PROGRESS]: Beginning create of zip file");
         Path tempDir = Files.createTempDirectory("images");
